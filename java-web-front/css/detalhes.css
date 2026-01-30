@@ -1,0 +1,144 @@
+
+
+body{
+  background-size: cover;
+  background-image:
+    radial-gradient(900px 520px at 75% 22%, rgba(210, 41, 192, 0.22), transparent 60%),
+    radial-gradient(860px 520px at 12% 78%, rgba(86, 164, 186, 0.18), transparent 62%),
+    radial-gradient(700px 420px at 72% 88%, rgba(242, 149, 27, 0.14), transparent 60%),
+    linear-gradient(180.61deg,
+      rgba(0, 0, 0, 0.90) 25.16%,
+      rgba(210, 41, 192, 0.14) 80%,
+      rgba(86, 164, 186, 0.14) 100%
+    );
+  padding: 5em;
+  min-height: 100vh;
+}
+
+.ficha{
+  padding: 18px;
+  border-radius: var(--radius-lg);
+  border: 1px solid rgba(255,255,255,0.08);
+  background: rgba(10, 13, 23, 0.38);
+  box-shadow: var(--shadow);
+  backdrop-filter: blur(12px);
+}
+
+.ficha img{
+  margin: 0 3em 2em 0;
+  border-radius: var(--radius);
+  border: 1px solid rgba(255,255,255,0.10);
+  box-shadow: var(--shadow-soft);
+  filter: saturate(1.05) contrast(1.05);
+}
+
+.ficha-descricao{
+  display: flex;
+}
+
+.ficha-descricao div{
+  display: flex;
+  flex-direction: column;
+  gap: 1.4em;
+}
+
+.ficha-temporada h3{
+  color: rgba(245,247,255,0.92);
+  letter-spacing: 0.2px;
+}
+
+.episodios{
+  padding: 14px;
+  border-radius: var(--radius);
+  border: 1px solid rgba(255,255,255,0.08);
+  background: rgba(10, 13, 23, 0.28);
+  box-shadow: var(--shadow-soft);
+}
+
+.episodios-lista{
+  height: 25vh;
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+  flex-wrap: wrap;
+  list-style-type: none;
+}
+
+.episodios-lista li{
+  padding: 10px 12px;
+  border-radius: 14px;
+  border: 1px solid rgba(255,255,255,0.08);
+  background: rgba(10, 13, 23, 0.35);
+  transition: transform 140ms ease, border 140ms ease;
+}
+
+.episodios-lista li:hover{
+  transform: translateY(-1px);
+  border-color: rgba(86, 164, 186, 0.35);
+}
+
+h2{
+  font-size: 44px;
+  color: var(--text);
+}
+
+p{
+  font-size: 20px;
+  color: var(--muted);
+  line-height: 1.5;
+}
+
+select,
+option{
+  font-size: 18px;
+  padding: 0 1em;
+  margin-bottom: 1em;
+  color: var(--text);
+  background-color: rgba(10, 13, 23, 0.80);
+}
+
+select{
+  border-radius: 999px;
+  border: 1px solid var(--stroke);
+  outline: none;
+  width: 140px;
+  height: 42px;
+  box-shadow: var(--shadow-soft);
+  backdrop-filter: blur(10px);
+
+  background:
+    linear-gradient(90deg,
+      rgba(124, 77, 255, 0.16),
+      rgba(210, 41, 192, 0.14),
+      rgba(242, 149, 27, 0.12),
+      rgba(86, 164, 186, 0.14)
+    );
+}
+
+select:focus{
+  border-color: rgba(242, 149, 27, 0.55);
+  box-shadow: 0 0 0 3px rgba(242, 149, 27, 0.14), var(--shadow-soft);
+}
+
+
+@media screen and (max-width: 900px){
+  body{
+    padding: 1.2em;
+  }
+
+  .ficha-descricao,
+  .episodios-lista{
+    display: block;
+    height: auto;
+  }
+
+  .ficha img{
+    width: 100%;
+    height: auto;
+    margin: 0 0 1em 0;
+  }
+
+  h2{
+    font-size: 34px;
+  }
+}
